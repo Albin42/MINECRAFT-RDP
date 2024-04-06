@@ -1,0 +1,11 @@
+services:
+  - name: ubuntu-desktop
+    type: docker
+    plan: starter
+    dockerfile: |
+      FROM dorowu/ubuntu-desktop-lxde-vnc
+      EXPOSE 80
+    env:
+      - key: PORT
+        value: 80
+        
